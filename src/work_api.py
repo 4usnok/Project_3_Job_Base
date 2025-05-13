@@ -19,14 +19,14 @@ class ApiWork:
         response_employer = requests.get(url)
         result_employer = response_employer.json()
         if result_employer['found'] >= 10:
-            for i in result_employer['items']:
-                response_vac = requests.get(i['vacancies_url'])
+            for item_employ in result_employer['items']:
+                response_vac = requests.get(item_employ['vacancies_url'])
                 result_vac = response_vac.json()
-                for k in result_vac['items']:
-                    if k["salary_range"] is not None:
-                        salary_from = k.get('salary_range', 0).get('from') if k.get('salary_range').get('from') else 0
-                        salary_to = k.get('salary_range', 0).get('to') if k.get('salary_range').get('to') else 0
-                        currency = k.get('salary_range', 0).get('currency') if k.get('salary_range').get('currency') else 0
+                for item_vac in result_vac['items']:
+                    if item_vac["salary_range"] is not None:
+                        salary_from = item_vac.get('salary_range', 0).get('from') if item_vac.get('salary_range').get('from') else 0
+                        salary_to = item_vac.get('salary_range', 0).get('to') if item_vac.get('salary_range').get('to') else 0
+                        currency = item_vac.get('salary_range', 0).get('currency') if item_vac.get('salary_range').get('currency') else 0
                         with psycopg2.connect(
                         host='localhost',
                         database='data_vacancies',
@@ -35,9 +35,9 @@ class ApiWork:
                     ) as conn:
                             with conn.cursor() as cur:
                                 cur.execute("INSERT INTO employers VALUES (%s, %s, %s)",
-                                            (i['id'], i['name'], i['vacancies_url']))
+                                            (item_employ['id'], item_employ['name'], item_employ['vacancies_url']))
                                 cur.execute("INSERT INTO vacancies VALUES (%s, %s, %s, %s, %s)",
-                                            (k['id'], k['name'], salary_from, salary_to, currency))
+                                            (item_vac['id'], item_vac['name'], salary_from, salary_to, currency))
 
 class_obj = ApiWork()
 class_obj.data_employers()
