@@ -1,6 +1,7 @@
 import psycopg2
 
 import requests
+from numpy.ma.extras import average
 
 
 class ApiWork:
@@ -23,7 +24,11 @@ class ApiWork:
         # api компаний
         url = f"https://api.{self.input_host}/employers?text={self.input_employer}"
         # Запрос к api компаний
-        response_employer = requests.get(url)
+        response_employer = requests.get(
+            url,
+            params={"employer_id": 88687},
+            timeout=120
+        )
         self.result_employer = response_employer.json()
         return self.result_employer
 
@@ -75,6 +80,7 @@ class_obj.load_in_db()
 # ALTER TABLE vacancies DROP COLUMN salary_from;
 # ALTER TABLE vacancies DROP COLUMN salary_to;
 # ALTER TABLE vacancies DROP COLUMN currency;
+# ALTER TABLE vacancies DROP COLUMN average_salary;
 #
 # ALTER TABLE vacancies RENAME salary TO salary_from;
 # ALTER TABLE vacancies ADD COLUMN salary_to int;
