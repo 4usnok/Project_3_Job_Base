@@ -37,7 +37,7 @@ class ApiWork:
         self.result_employer = response_employer.json()
 
     def load_in_employ(self):
-        """Метод подготовки для загрузки в базы данных"""
+        """Метод для загрузки содержимого таблицы employers в БД"""
         if self.result_employer is None:  # Проверка на обновлённую переменную - self.result_employer
             self.data_employers_api()
         if self.result_employer['found'] >= self.num:
@@ -57,7 +57,7 @@ class ApiWork:
                         )
 #
     def work_for_vac(self):
-        """Метод отвечает непосредственно за работу с колонками таблиц: vacancies, employers"""
+        """Метод для загрузки содержимого таблицы vacancies в БД"""
         if self.result_employer is None:  # Проверка на обновлённую переменную - self.result_employer
             self.data_employers_api()
         if self.result_employer['found'] >= self.num:
