@@ -82,10 +82,6 @@ class ApiWork:
                                     )
                                 )
 
-class_obj = ApiWork(10, 'hh.ru')
-class_obj.load_in_employ()
-class_obj.work_for_vac()
-
 
 # Запросы для sql
 
