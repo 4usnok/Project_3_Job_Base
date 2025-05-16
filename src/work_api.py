@@ -11,7 +11,6 @@ class ApiWork:
         'res_employ',
         'result_vac',
         'conn'
-
     )
 
     def __init__(self, num):
@@ -31,7 +30,7 @@ class ApiWork:
     def data_employers_api(self):
         """Метод api для получения данных о работодателях с сайта hh.ru"""
         # api компаний
-        input_employer = input('Введите название компании, информацию о которой хотите загрузить в БД: ')
+        input_employer = input('Введите название компании для добавления: ')
         url = f"https://api.hh.ru/employers?text={input_employer}"
         # Запрос к api компаний
         response_employer = requests.get(
