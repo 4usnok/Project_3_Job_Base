@@ -4,7 +4,7 @@ import requests
 
 class ApiWork:
     __slots__ = (
-        'input_host',
+        'input_employer',
         'num',
         'result_employer',
         'res_vac',
@@ -13,8 +13,9 @@ class ApiWork:
         'conn'
     )
 
-    def __init__(self, num):
+    def __init__(self, num, input_employer):
         """Конструктор"""
+        self.input_employer = input_employer
         self.num = num
         self.result_employer = None
         self.res_vac = None
@@ -29,9 +30,8 @@ class ApiWork:
 
     def data_employers_api(self):
         """Метод api для получения данных о работодателях с сайта hh.ru"""
-        # api компаний
-        input_employer = input('Введите название компании для добавления: ')
-        url = f"https://api.hh.ru/employers?text={input_employer}"
+
+        url = f"https://api.hh.ru/employers?text={self.input_employer}"
         # Запрос к api компаний
         response_employer = requests.get(
             url,
