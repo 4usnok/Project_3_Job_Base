@@ -8,7 +8,9 @@ from src.work_bd import DBManager
 def main():
     """Управляющая функция"""
     # Настройка логирования
-    logging.basicConfig(level=logging.INFO, filename="py_log.log",filemode="w")
+    path_to_log = 'logs/main_log.log'
+    logging.basicConfig(filename=path_to_log, level=logging.INFO,
+                        format='%(asctime)s - %(levelname)s - %(module)s - %(message)s')
     logging.debug("A DEBUG Message")
     logging.info("An INFO")
     logging.warning("A WARNING")
@@ -16,7 +18,7 @@ def main():
     logging.critical("A message of CRITICAL severity")
 
     # `input_field` - это поле ввода для названия компании, информация о которой, добавляется в БД.
-    input_field = "сбер"
+    input_field = "академия"
     # При отсутствии, либо названии, которое раньше было использовано, у нас происходит падения программы
     # Чтобы этого избежать, мы обрабатываем исключения
     try:
@@ -26,9 +28,9 @@ def main():
             obj_class.load_for_vac()
         else:
             pass
-    except psycopg2.Error as err:
+    except psycopg2.Error:
         # Воспользуемся библиотекой logging, чтобы не перегружать информацией консоль
-        logging.error({err},exc_info=True)
+        logging.exception("Ошибка")
 
     print(
         "Здравствуйте!"

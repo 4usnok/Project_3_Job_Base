@@ -30,7 +30,9 @@ class ApiWork:
             password='10121331')
 
         # Настройка логирования
-        logging.basicConfig(level=logging.INFO, filename="../py_log.log", filemode="w")
+        path_to_log = '../logs/api_log.log'
+        logging.basicConfig(filename=path_to_log, level=logging.INFO,
+                            format='%(asctime)s - %(levelname)s - %(module)s - %(message)s')
         logging.debug("A DEBUG Message")
         logging.info("An INFO")
         logging.warning("A WARNING")
@@ -51,10 +53,7 @@ class ApiWork:
                     "per_page": self.num # Ограничение на кол-во результатов
                 },
                 timeout=60,
-
             )
-            response_employer.raise_for_status()  # Проверяем статус здесь!
-
             self.result_employer = response_employer.json()
             if not isinstance(self.result_employer, dict):
                 raise ValueError("Некорректный формат данных от API")
