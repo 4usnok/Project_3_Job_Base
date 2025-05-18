@@ -1,7 +1,8 @@
 import logging
 
 import psycopg2
-from src.work_api import ApiWork
+from src.api_for_employers import WorkingWithEmployers
+from src.api_for_vacancies import WorkingWithVacancies
 from src.work_bd import DBManager
 
 
@@ -18,14 +19,15 @@ def main():
     logging.critical("A message of CRITICAL severity")
 
     # `input_field` - это поле ввода для названия компании, информация о которой, добавляется в БД.
-    input_field = "академия"
+    input_field = "остин"
     # При отсутствии, либо названии, которое раньше было использовано, у нас происходит падения программы
     # Чтобы этого избежать, мы обрабатываем исключения
     try:
         if input_field != "":
-            obj_class = ApiWork(10, input_field)
-            obj_class.load_for_employ()
-            obj_class.load_for_vac()
+            obj_cl_e = WorkingWithEmployers(10, input_field)
+            obj_cl_v = WorkingWithVacancies(10, input_field)
+            obj_cl_e.load_for_employ()
+            obj_cl_v.load_for_vac()
         else:
             pass
     except psycopg2.Error:
