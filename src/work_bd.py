@@ -6,6 +6,8 @@ from tabulate import tabulate
 
 class DBManager:
 
+    __slots__ = ('conn', 'cur')
+
     def __init__(self):
         """Конструктор"""
         self.conn = psycopg2.connect(
