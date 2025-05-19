@@ -1,6 +1,7 @@
 import logging
 
 import psycopg2
+
 from src.api_for_employers import WorkingWithEmployers
 from src.api_for_vacancies import WorkingWithVacancies
 from src.work_bd import DBManager
@@ -9,9 +10,12 @@ from src.work_bd import DBManager
 def main():
     """Управляющая функция"""
     # Настройка логирования
-    path_to_log = 'logs/main_log.log'
-    logging.basicConfig(filename=path_to_log, level=logging.INFO,
-                        format='%(asctime)s - %(levelname)s - %(module)s - %(message)s')
+    path_to_log = "logs/main_log.log"
+    logging.basicConfig(
+        filename=path_to_log,
+        level=logging.INFO,
+        format="%(asctime)s - %(levelname)s - %(module)s - %(message)s",
+    )
     logging.debug("A DEBUG Message")
     logging.info("An INFO")
     logging.warning("A WARNING")
@@ -60,5 +64,6 @@ def main():
     elif input_db == "5":
         return class_db.get_vacancies_with_keyword()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     print(main())
