@@ -7,7 +7,7 @@ from src.api_for_vacancies import WorkingWithVacancies
 from src.work_bd import DBManager
 
 
-def main():
+def point_of_contact():
     """Управляющая функция"""
     # Настройка логирования
     path_to_log = "logs/main_log.log"
@@ -66,4 +66,4 @@ def main():
 
 
 if __name__ == "__main__":
-    print(main())
+    print(point_of_contact())
