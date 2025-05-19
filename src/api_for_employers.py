@@ -79,14 +79,16 @@ class WorkingWithEmployers:
                 host='localhost',
                 database='data_base',
                 user='postgres',
-                password='10121331')
+                password='10121331'
+            )
+            conn.autocommit = True
             with conn.cursor() as cur:
                 cur.execute(
                     "INSERT INTO employers VALUES (%s, %s, %s, %s)",
                     (item_res.get('id', 0), item_res.get('name', 0), item_res.get('vacancies_url', 0),
                      item_res['open_vacancies'])
                 )
-                cur.execute("SELECT * FROM employers")
-                conn.commit() # сохранение
+            cur.execute("SELECT * FROM employers")
+            conn.commit() # сохранение
         except Exception as err:
             logging.error({err},exc_info=True)

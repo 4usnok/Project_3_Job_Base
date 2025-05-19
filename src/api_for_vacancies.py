@@ -24,7 +24,7 @@ class WorkingWithVacancies:
         self.result_vac = None
 
         # Настройка логирования
-        path_to_log = '../logs/api_log.log'
+        path_to_log = 'api_log.log'
         logging.basicConfig(filename=path_to_log, level=logging.INFO,
                             format='%(asctime)s - %(levelname)s - %(module)s - %(message)s')
         logging.debug("A DEBUG Message")
@@ -46,7 +46,7 @@ class WorkingWithVacancies:
                     "text": self.input_employer, # Название компании
                     "per_page": self.num # Ограничение на кол-во результатов
                 },
-                timeout=60,
+                timeout=120,
             )
             self.result_employer = response_employer.json()
             if not isinstance(self.result_employer, dict):
@@ -65,41 +65,42 @@ class WorkingWithVacancies:
         """Метод загрузки содержимого таблицы vacancies в БД"""
         if self.result_employer is None:  # Проверка на обновлённую переменную - self.result_employer
             self.data_employers_api()
-        try:
-            if self.result_employer['found'] >= self.num:
-                for item_employ in self.result_employer['items']:
-                    response_vac = requests.get(item_employ['vacancies_url'])
-                    self.result_vac = response_vac.json()
-                    for item_vac in self.result_vac['items']:
-                        if item_vac["salary_range"] is not None:
-                            salary_from = item_vac.get('salary_range', 0).get('from') if item_vac.get('salary_range').get \
-                                ('from') else 0
-                            salary_to = item_vac.get('salary_range', 0).get('to') if item_vac.get('salary_range').get \
-                                ('to') else 0
-                            currency = item_vac.get('salary_range', 0).get('currency') if item_vac.get('salary_range').get \
-                                ('currency') else 0
-                            self.__load_for_vac(item_vac, salary_from, salary_to, currency) # Передаём, как параметры приватного метода
-        except KeyError as err:
-            logging.error({err}, exc_info=True)
+        if self.result_employer['found'] >= self.num:
+            for item_employ in self.result_employer['items']: # Данные о компаниях
+                response_vac = requests.get(item_employ['vacancies_url'])
+                self.result_vac = response_vac.json()
+                for vac_name in self.result_vac.get('items', None):
+                    salary = vac_name.get('salary_range', 0)
+                    if salary is not None:
+                        salary = vac_name.get('salary_range', 0)
+                        id_employers = item_employ['id']
+                        name_vac = vac_name.get('name', None)
+                        salary_from = salary.get('from')
+                        salary_to = salary.get('to')
+                        currency = salary.get('currency')
+                        self.__load_for_vac(id_employers, name_vac, salary_from, salary_to, currency)
 
-    def __load_for_vac(self, item_vac, salary_from, salary_to, currency):
+    def __load_for_vac(self, id_employers, name_vac, salary_from, salary_to, currency):
         """Приватный метод загрузки данных таблицы vacancies в БД"""
+        conn = None
         try:
             conn = psycopg2.connect(
                 host='localhost',
                 database='data_base',
                 user='postgres',
-                password='10121331')
-            with conn as conn:
-                with conn.cursor() as cur:
-                    cur.execute(
-                        "INSERT INTO vacancies VALUES (%s, %s, %s, %s, %s)",
-                        (item_vac['id'], item_vac['name'], salary_from, salary_to, currency
-                         )
-                    )
-                    cur.execute("SELECT * FROM vacancies")
+                password='10121331'
+            )
+            conn.autocommit = True
+            with conn.cursor() as cur:
+                cur.execute(
+                    "INSERT INTO vacancies VALUES (%s, %s, %s, %s, %s)",
+                    (id_employers, name_vac, salary_from, salary_to, currency)
+                )
+                cur.execute("SELECT * FROM employers")
+                cur.execute("ALTER TABLE vacancies ADD CONSTRAINT unique_vacancy UNIQUE (vacancies_id, vac_name);")
+                conn.commit()  # сохранение
         except Exception as err:
             logging.error({err} ,exc_info=True)
         finally:
-            conn.commit() # сохранение
-            conn.close() # закрытие соединения
+            if conn:
+                conn.close()
