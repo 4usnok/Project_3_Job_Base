@@ -17,7 +17,7 @@ class DBManager:
 
         # Настройка логирования
         logging.basicConfig(
-            filename="../logs/main_log.log",
+            filename="logs/main_log.log",
             level=logging.INFO,
             format="%(asctime)s - %(levelname)s - %(module)s - %(message)s",
         )
