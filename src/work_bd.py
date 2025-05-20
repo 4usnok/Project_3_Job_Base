@@ -16,9 +16,8 @@ class DBManager:
         self.cur = self.conn.cursor()
 
         # Настройка логирования
-        path_to_log = "../logs/bd_log.log"
         logging.basicConfig(
-            filename=path_to_log,
+            filename="../logs/main_log.log",
             level=logging.INFO,
             format="%(asctime)s - %(levelname)s - %(module)s - %(message)s",
         )

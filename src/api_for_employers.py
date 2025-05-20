@@ -24,9 +24,8 @@ class WorkingWithEmployers:
         self.result_vac = None
 
         # Настройка логирования
-        path_to_log = "../logs/api_log.log"
         logging.basicConfig(
-            filename=path_to_log,
+            filename="../logs/main_log.log",
             level=logging.INFO,
             format="%(asctime)s - %(levelname)s - %(module)s - %(message)s",
         )

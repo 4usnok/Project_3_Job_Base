@@ -24,9 +24,8 @@ class WorkingWithVacancies:
         self.result_vac = None
 
         # Настройка логирования
-        path_to_log = "../logs/api_log.log"
         logging.basicConfig(
-            filename=path_to_log,
+            filename="../logs/main_log.log",
             level=logging.INFO,
             format="%(asctime)s - %(levelname)s - %(module)s - %(message)s",
         )
@@ -65,20 +64,19 @@ class WorkingWithVacancies:
 
     def load_for_vac(self):
         """Метод работы с api-данными перед загрузкой содержимого таблицы vacancies в БД"""
-        if (
-            self.result_employer is None
-        ):  # Проверка на обновлённую переменную - self.result_employer
+        if self.result_employer is None:
             self.data_employers_api()
+
         if self.result_employer["found"] >= self.num:
-            for item_employ in self.result_employer["items"]:  # Данные о компаниях
+            for item_employ in self.result_employer["items"]:
                 response_vac = requests.get(item_employ["vacancies_url"])
                 self.result_vac = response_vac.json()
-                for vac_name in self.result_vac.get("items", None):
-                    salary = vac_name.get("salary_range", 0)
-                    if salary is not None:
-                        salary = vac_name.get("salary_range", 0)
+
+                for vac_name in self.result_vac.get("items", []):  # Защита от None
+                    salary = vac_name.get("salary", {})  # Всегда словарь
+                    if salary:  # Проверяем, что salary не пустой
                         id_employers = item_employ["id"]
-                        name_vac = vac_name.get("name", None)
+                        name_vac = vac_name.get("name", "")
                         salary_from = salary.get("from")
                         salary_to = salary.get("to")
                         currency = salary.get("currency")
