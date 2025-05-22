@@ -94,7 +94,7 @@ class WorkingWithEmployers:
             self.conn.close()
 
     def load_for_employ(self):
-        """Метод загрузки содержимого таблицы employers в БД"""
+        """Метод загрузки содержимого в таблицу employers в БД"""
         try:
             if (
                 self.result_employer is None

@@ -117,7 +117,7 @@ class WorkingWithVacancies:
                         )
 
     def __load_for_vac(self, id_employers, name_vac, salary_from, salary_to, currency):
-        """Приватный метод загрузки данных таблицы vacancies в БД"""
+        """Приватный метод загрузки данных в таблицу vacancies в БД"""
         conn = None
         try:
             conn = psycopg2.connect(
