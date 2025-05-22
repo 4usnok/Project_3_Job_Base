@@ -1,11 +1,18 @@
 import logging
+import os
 
 import psycopg2
 import requests
+from dotenv import load_dotenv
 
+load_dotenv()
 
 class WorkingWithEmployers:
+
     __slots__ = (
+        "bd_password",
+        "conn",
+        "cur",
         "input_employer",
         "num",
         "result_employer",
@@ -16,6 +23,11 @@ class WorkingWithEmployers:
 
     def __init__(self, num, input_employer):
         """Конструктор"""
+        self.bd_password = os.getenv("DB_PASSWORD")
+        self.conn = psycopg2.connect(
+            host="localhost", database="data_base", user="postgres", password=self.bd_password
+        )
+        self.cur = self.conn.cursor()
         self.input_employer = input_employer
         self.num = num
         self.result_employer = None
@@ -61,6 +73,22 @@ class WorkingWithEmployers:
         """Приватный метод работы с API"""
         return self.data_employers_api
 
+    def create_table_for_employers(self):
+        """Метод для создания таблицы с компаниями"""
+        try:
+            self.cur.execute(
+                "CREATE TABLE employers("
+                "employers_id SERIAL PRIMARY KEY,"
+                "employers_name varchar(100),"
+                "employers_vacancies_url varchar(100),"
+                "employers_item int"
+                ");"
+            )
+        finally:
+            self.conn.commit()
+            self.cur.close()
+            self.conn.close()
+
     def load_for_employ(self):
         """Метод загрузки содержимого таблицы employers в БД"""
         try:
@@ -98,3 +126,4 @@ class WorkingWithEmployers:
             conn.commit()  # сохранение
         except Exception as err:
             logging.error({err}, exc_info=True)
+

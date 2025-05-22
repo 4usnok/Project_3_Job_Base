@@ -1,11 +1,17 @@
 import logging
-
+from dotenv import load_dotenv
 import psycopg2
 import requests
+import os
 
+load_dotenv()
 
 class WorkingWithVacancies:
+
     __slots__ = (
+        "bd_password",
+        "conn",
+        "cur",
         "input_employer",
         "num",
         "result_employer",
@@ -16,6 +22,11 @@ class WorkingWithVacancies:
 
     def __init__(self, num, input_employer):
         """Конструктор"""
+        self.bd_password = os.getenv("DB_PASSWORD")
+        self.conn = psycopg2.connect(
+            host="localhost", database="data_base", user="postgres", password=self.bd_password
+        )
+        self.cur = self.conn.cursor()
         self.input_employer = input_employer
         self.num = num
         self.result_employer = None
@@ -37,7 +48,6 @@ class WorkingWithVacancies:
 
     def data_employers_api(self):
         """Метод api для получения данных о работодателях с сайта hh.ru"""
-
         url = "https://api.hh.ru/employers"
         # Запрос к api компаний
         try:
@@ -61,6 +71,24 @@ class WorkingWithVacancies:
     def __data_employers_api(self):
         """Приватный метод работы с API"""
         return self.data_employers_api
+
+    def create_table_for_vacancies(self):
+        """Метод для создания таблицы с вакансиями"""
+        try:
+            self.cur.execute(
+                "CREATE TABLE vacancies("
+                "vacancies_id int,"
+                "FOREIGN KEY(vacancies_id) REFERENCES employers(employers_id),"
+                "vac_name varchar(100),"
+                "salary_from int,"
+                "salary_to int,"
+                "currency varchar(10)"
+                ");"
+            )
+        finally:
+            self.conn.commit()
+            self.cur.close()
+            self.conn.close()
 
     def load_for_vac(self):
         """Метод работы с api-данными перед загрузкой содержимого таблицы vacancies в БД"""

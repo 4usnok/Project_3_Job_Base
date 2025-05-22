@@ -23,21 +23,31 @@ def point_of_contact():
     logging.critical("A message of CRITICAL severity")
 
     # `input_field` - это поле ввода для названия компании, информация о которой, добавляется в БД.
-    input_field = "КБ"
+    input_field = "Остин"
     # При отсутствии, либо названии, которое раньше было использовано, у нас происходит падения программы
-    # Чтобы этого избежать, мы обрабатываем исключения
+    # Чтобы этого избежать, мы обрабатываем исключения.
+    # Создадим блок для создания таблиц с вакансиями и компаниями
     try:
         if input_field != "":
-            obj_cl_e = WorkingWithEmployers(10, input_field)
-            obj_cl_v = WorkingWithVacancies(10, input_field)
-            obj_cl_e.load_for_employ()
-            obj_cl_v.load_for_vac()
+            obj_cl_for_create_e = WorkingWithEmployers(10, input_field)
+            obj_cl_for_create_v = WorkingWithVacancies(10, input_field)
+            obj_cl_for_create_e.create_table_for_employers()
+            obj_cl_for_create_v.create_table_for_vacancies()
         else:
             pass
     except psycopg2.Error:
         # Воспользуемся библиотекой logging, чтобы не перегружать информацией консоль
         logging.exception("Ошибка")
 
+    # Создадим блок для загрузки данных в таблицы
+    try:
+        obj_for_load_e = WorkingWithEmployers(10, input_field)
+        obj_for_load_v = WorkingWithVacancies(10, input_field)
+        obj_for_load_e.load_for_employ()
+        obj_for_load_v.load_for_vac()
+    except psycopg2.Error:
+        # Воспользуемся библиотекой logging, чтобы не перегружать информацией консоль
+        logging.exception("Ошибка")
     print(
         "Здравствуйте!"
         "\nДанная программа, предоставляет пользователю информацию о компаниях и их вакансиях с hh.ru.\n"
