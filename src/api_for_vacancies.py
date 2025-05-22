@@ -6,6 +6,7 @@ import os
 
 load_dotenv()
 
+
 class WorkingWithVacancies:
 
     __slots__ = (
@@ -24,7 +25,10 @@ class WorkingWithVacancies:
         """Конструктор"""
         self.bd_password = os.getenv("DB_PASSWORD")
         self.conn = psycopg2.connect(
-            host="localhost", database="data_base", user="postgres", password=self.bd_password
+            host="localhost",
+            database="data_base",
+            user="postgres",
+            password=self.bd_password,
         )
         self.cur = self.conn.cursor()
         self.input_employer = input_employer

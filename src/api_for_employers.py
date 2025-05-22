@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 class WorkingWithEmployers:
 
     __slots__ = (
@@ -25,7 +26,10 @@ class WorkingWithEmployers:
         """Конструктор"""
         self.bd_password = os.getenv("DB_PASSWORD")
         self.conn = psycopg2.connect(
-            host="localhost", database="data_base", user="postgres", password=self.bd_password
+            host="localhost",
+            database="data_base",
+            user="postgres",
+            password=self.bd_password,
         )
         self.cur = self.conn.cursor()
         self.input_employer = input_employer
@@ -126,4 +130,3 @@ class WorkingWithEmployers:
             conn.commit()  # сохранение
         except Exception as err:
             logging.error({err}, exc_info=True)
-

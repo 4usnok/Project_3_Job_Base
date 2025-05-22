@@ -7,15 +7,19 @@ from tabulate import tabulate
 
 load_dotenv()
 
+
 class DBManager:
 
-    __slots__ = ('bd_password', 'conn', 'cur')
+    __slots__ = ("bd_password", "conn", "cur")
 
     def __init__(self):
         """Конструктор"""
         self.bd_password = os.getenv("DB_PASSWORD")
         self.conn = psycopg2.connect(
-            host="localhost", database="data_base", user="postgres", password=self.bd_password
+            host="localhost",
+            database="data_base",
+            user="postgres",
+            password=self.bd_password,
         )
         self.cur = self.conn.cursor()
 
