@@ -2,7 +2,7 @@ import logging
 import unittest
 from unittest.mock import patch
 
-from src.work_bd import DBManager
+from src.work_db import DBManager
 
 
 class TestDBManager(unittest.TestCase):
@@ -24,7 +24,7 @@ class TestDBManager(unittest.TestCase):
         mock_cursor.description = [
             ("employers_name",),
             ("employers_item",),
-            ("vac_name",),
+            ("employers_vacancies_url",),
         ]
         mock_cursor.fetchall.return_value = [
             ("Company1", "Item1", "Vacancy1"),
@@ -36,7 +36,7 @@ class TestDBManager(unittest.TestCase):
 
         # Проверяем вызовы
         mock_cursor.execute.assert_called_once_with(
-            "SELECT employers.employers_name, employers.employers_item, vacancies.vac_name "
+            "SELECT employers.employers_name, employers.employers_item, employers.employers_vacancies_url "
             "FROM employers "
             "JOIN vacancies "
             "ON vacancies.vacancies_id=employers.employers_id;"
@@ -54,7 +54,7 @@ class TestDBManager(unittest.TestCase):
             ("salary_from",),
             ("salary_to",),
             ("currency",),
-            ("employers_vacancies_url",),
+            ("vacancies_url",),
         ]
         mock_cursor.fetchall.return_value = [
             ("Company1", "Vacancy1", 100000, 150000, "RUR", "http://example.com")
@@ -71,7 +71,7 @@ class TestDBManager(unittest.TestCase):
             "vacancies.salary_from, "
             "vacancies.salary_to, "
             "vacancies.currency, "
-            "employers.employers_vacancies_url "
+            "vacancies.vacancies_url "
             "FROM employers "
             "INNER JOIN vacancies "
             "ON vacancies.vacancies_id=employers.employers_id;"

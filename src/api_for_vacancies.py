@@ -1,8 +1,9 @@
 import logging
-from dotenv import load_dotenv
+import os
+
 import psycopg2
 import requests
-import os
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -115,10 +116,17 @@ class WorkingWithVacancies:
                         currency = salary.get("currency")
                         vac_url = vac_name.get("alternate_url", 0)
                         self.__load_for_vac(
-                            id_employers, name_vac, salary_from, salary_to, currency, vac_url
+                            id_employers,
+                            name_vac,
+                            salary_from,
+                            salary_to,
+                            currency,
+                            vac_url,
                         )
 
-    def __load_for_vac(self, id_employers, name_vac, salary_from, salary_to, currency, vac_url):
+    def __load_for_vac(
+        self, id_employers, name_vac, salary_from, salary_to, currency, vac_url
+    ):
         """Приватный метод загрузки данных в таблицу vacancies в БД"""
         conn = None
         try:

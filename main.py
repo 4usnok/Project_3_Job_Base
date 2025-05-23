@@ -4,7 +4,7 @@ import psycopg2
 
 from src.api_for_employers import WorkingWithEmployers
 from src.api_for_vacancies import WorkingWithVacancies
-from src.work_bd import DBManager
+from src.work_db import DBManager
 
 
 def point_of_contact():
