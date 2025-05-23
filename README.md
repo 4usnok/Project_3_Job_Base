@@ -16,7 +16,7 @@ pip install -r requirements.txt
 1. `main.py`
 * Является управляющим модулем и находится в корне проекта 
 * Содержит управляющую функцию `point_of_contact`
-2. `work_bd.py`
+2. `work_db.py`
 * Содержит класс `DBManager`, который предоставляет работать с таблицами вакансий и компаний
 * Содержит метод `get_companies_and_vacancies_count`:
 Метод позволяет получать, список всех компаний из таблицы employers, так и количество вакансий из таблицы vacancies.
@@ -56,7 +56,7 @@ pip install -r requirements.txt
 
 # Тестирование
 * Модули с тестами находятся в директории `tests` в корне проекта: 
-test_work_bd.py, test_api_for_employers.py, test_api_for_vacancies.py
+test_work_db.py, test_api_for_employers.py, test_api_for_vacancies.py
 
 # Принцип работы модуля main.py
 В `main.py`, находится управляющая функция `point_of_contact`, которая 
