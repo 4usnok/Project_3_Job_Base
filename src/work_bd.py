@@ -40,7 +40,7 @@ class DBManager:
         так и количество вакансий из таблицы vacancies."""
         try:
             self.cur.execute(
-                "SELECT employers.employers_name, employers.employers_item, vacancies.vac_name "
+                "SELECT employers.employers_name, employers.employers_item, employers.employers_vacancies_url "
                 "FROM employers "
                 "JOIN vacancies "
                 "ON vacancies.vacancies_id=employers.employers_id;"
@@ -72,7 +72,7 @@ class DBManager:
                 "vacancies.salary_from, "
                 "vacancies.salary_to, "
                 "vacancies.currency, "
-                "employers.employers_vacancies_url "
+                "vacancies.vacancies_url "
                 "FROM employers "
                 "INNER JOIN vacancies "
                 "ON vacancies.vacancies_id=employers.employers_id;"

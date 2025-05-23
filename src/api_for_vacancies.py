@@ -86,11 +86,12 @@ class WorkingWithVacancies:
                 "vac_name varchar(100),"
                 "salary_from int,"
                 "salary_to int,"
-                "currency varchar(10)"
+                "currency varchar(10),"
+                "vacancies_url varchar(100)"
                 ");"
             )
-        finally:
             self.conn.commit()
+        finally:
             self.cur.close()
             self.conn.close()
 
@@ -112,11 +113,12 @@ class WorkingWithVacancies:
                         salary_from = salary.get("from")
                         salary_to = salary.get("to")
                         currency = salary.get("currency")
+                        vac_url = vac_name.get("alternate_url", 0)
                         self.__load_for_vac(
-                            id_employers, name_vac, salary_from, salary_to, currency
+                            id_employers, name_vac, salary_from, salary_to, currency, vac_url
                         )
 
-    def __load_for_vac(self, id_employers, name_vac, salary_from, salary_to, currency):
+    def __load_for_vac(self, id_employers, name_vac, salary_from, salary_to, currency, vac_url):
         """Приватный метод загрузки данных в таблицу vacancies в БД"""
         conn = None
         try:
@@ -129,8 +131,8 @@ class WorkingWithVacancies:
             conn.autocommit = True
             with conn.cursor() as cur:
                 cur.execute(
-                    "INSERT INTO vacancies VALUES (%s, %s, %s, %s, %s)",
-                    (id_employers, name_vac, salary_from, salary_to, currency),
+                    "INSERT INTO vacancies VALUES (%s, %s, %s, %s, %s, %s)",
+                    (id_employers, name_vac, salary_from, salary_to, currency, vac_url),
                 )
                 cur.execute("SELECT * FROM employers")
                 cur.execute(
