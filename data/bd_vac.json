@@ -1,0 +1,495 @@
+[
+    {
+        "employers_name": "OSTIN",
+        "data_vacancies": [
+            {
+                "name_vacancies": "Менеджер по работе с отзывами",
+                "salary": {
+                    "from": 39000,
+                    "to": 39000,
+                    "currency": "RUR",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120509202"
+            },
+            {
+                "name_vacancies": "Младший специалист по целевым коммуникациям",
+                "salary": null,
+                "url_vacancies": "https://hh.ru/vacancy/120028032"
+            },
+            {
+                "name_vacancies": "Менеджер по маркетингу в социальных сетях (ТМ FACE CODE)",
+                "salary": null,
+                "url_vacancies": "https://hh.ru/vacancy/120381984"
+            },
+            {
+                "name_vacancies": "Управляющий магазином",
+                "salary": {
+                    "from": 82000,
+                    "to": null,
+                    "currency": "RUR",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120424826"
+            },
+            {
+                "name_vacancies": "Ассистент на фотостудию",
+                "salary": null,
+                "url_vacancies": "https://hh.ru/vacancy/118685752"
+            },
+            {
+                "name_vacancies": "Администратор фотостудии",
+                "salary": null,
+                "url_vacancies": "https://hh.ru/vacancy/119052530"
+            },
+            {
+                "name_vacancies": "Менеджер по размещению рекламы",
+                "salary": null,
+                "url_vacancies": "https://hh.ru/vacancy/119970293"
+            },
+            {
+                "name_vacancies": "Продавец-кассир ТЦ \"Лента Говорово\"",
+                "salary": {
+                    "from": 40000,
+                    "to": null,
+                    "currency": "RUR",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120266460"
+            },
+            {
+                "name_vacancies": "Менеджер по операционному маркетингу",
+                "salary": null,
+                "url_vacancies": "https://hh.ru/vacancy/120211848"
+            },
+            {
+                "name_vacancies": "Категорийный менеджер",
+                "salary": null,
+                "url_vacancies": "https://hh.ru/vacancy/119284946"
+            },
+            {
+                "name_vacancies": "Управляющий магазином, ТРЦ Галерея Краснодар (бренд FACE CODE)",
+                "salary": {
+                    "from": 88000,
+                    "to": null,
+                    "currency": "RUR",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120526807"
+            },
+            {
+                "name_vacancies": "Визуальный мерчендайзер O'STIN",
+                "salary": null,
+                "url_vacancies": "https://hh.ru/vacancy/120469662"
+            },
+            {
+                "name_vacancies": "Младший аналитик (планирование продаж)",
+                "salary": null,
+                "url_vacancies": "https://hh.ru/vacancy/119388468"
+            },
+            {
+                "name_vacancies": "Конструктор одежды (ТМ O'STIN)",
+                "salary": null,
+                "url_vacancies": "https://hh.ru/vacancy/120059799"
+            },
+            {
+                "name_vacancies": "Продавец-кассир ТЦ \"Красноярье\" на 0,5 ставки",
+                "salary": {
+                    "from": 16800,
+                    "to": null,
+                    "currency": "RUR",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120207246"
+            },
+            {
+                "name_vacancies": "Кладовщик в ТРЦ \"Пушкино Парк\"",
+                "salary": {
+                    "from": 25357,
+                    "to": null,
+                    "currency": "RUR",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120368658"
+            },
+            {
+                "name_vacancies": "Младший аналитик (Планирование товара TM Ostin)",
+                "salary": null,
+                "url_vacancies": "https://hh.ru/vacancy/119969930"
+            },
+            {
+                "name_vacancies": "Начальник отдела Маркетинга TM FACE CODE",
+                "salary": null,
+                "url_vacancies": "https://hh.ru/vacancy/119759547"
+            },
+            {
+                "name_vacancies": "Продавец-кассир выходного дня (ТЦ \"Солнечный рай\")",
+                "salary": {
+                    "from": 47800,
+                    "to": null,
+                    "currency": "RUR",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120292656"
+            },
+            {
+                "name_vacancies": "Администратор магазина (ТРЦ \"Рубин\")",
+                "salary": {
+                    "from": 65520,
+                    "to": null,
+                    "currency": "RUR",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120495626"
+            }
+        ]
+    },
+    {
+        "employers_name": "Ателье Остин",
+        "data_vacancies": []
+    },
+    {
+        "employers_name": "ОсОО Остин Авто",
+        "data_vacancies": []
+    },
+    {
+        "employers_name": "Остин",
+        "data_vacancies": []
+    },
+    {
+        "employers_name": "Остин",
+        "data_vacancies": []
+    },
+    {
+        "employers_name": "ОСТИН",
+        "data_vacancies": [
+            {
+                "name_vacancies": "Оператор 1С, менеджер по работе с клиентами",
+                "salary": {
+                    "from": 60000,
+                    "to": null,
+                    "currency": "RUR",
+                    "gross": false
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120463098"
+            }
+        ]
+    },
+    {
+        "employers_name": "Остина Мария",
+        "data_vacancies": []
+    },
+    {
+        "employers_name": "Остин Бел",
+        "data_vacancies": [
+            {
+                "name_vacancies": "Сотрудник склада/Кладовщик в ТЦ \"Мандарин Плаза\"",
+                "salary": {
+                    "from": 500,
+                    "to": 600,
+                    "currency": "BYR",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120327433"
+            },
+            {
+                "name_vacancies": "Кладовщик-грузчик в ТК \"OUTLETO\"",
+                "salary": {
+                    "from": 1900,
+                    "to": null,
+                    "currency": "BYR",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120518062"
+            },
+            {
+                "name_vacancies": "Продавец-кассир (ТК \"Магнит\")",
+                "salary": {
+                    "from": 690,
+                    "to": null,
+                    "currency": "BYR",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120422003"
+            },
+            {
+                "name_vacancies": "Продавец-кассир в ТК \"OUTLETO\"",
+                "salary": {
+                    "from": 1400,
+                    "to": 1600,
+                    "currency": "BYR",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/119316132"
+            },
+            {
+                "name_vacancies": "Продавец-кассир (ТК \"Green City\")",
+                "salary": {
+                    "from": 690,
+                    "to": null,
+                    "currency": "BYR",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/119811965"
+            },
+            {
+                "name_vacancies": "Продавец-кассир в ТК \"Парк Сити\"",
+                "salary": {
+                    "from": 530,
+                    "to": null,
+                    "currency": "BYR",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120226399"
+            },
+            {
+                "name_vacancies": "Кладовщик/грузчик в ТК \"Green City\"",
+                "salary": {
+                    "from": 1585,
+                    "to": null,
+                    "currency": "BYR",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/119778262"
+            },
+            {
+                "name_vacancies": "Продавец-кассир в ТК \"Green City\"",
+                "salary": {
+                    "from": 1380,
+                    "to": null,
+                    "currency": "BYR",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/119812229"
+            },
+            {
+                "name_vacancies": "Продавец-кассир в ТК \"Dana Mall\"",
+                "salary": {
+                    "from": 1380,
+                    "to": null,
+                    "currency": "BYR",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/115432869"
+            },
+            {
+                "name_vacancies": "Продавец-кассир (ТК \"OUTLETO\")",
+                "salary": {
+                    "from": 700,
+                    "to": 1300,
+                    "currency": "BYR",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120022125"
+            }
+        ]
+    },
+    {
+        "employers_name": "Остин Казахстан (O'stin ТМ)",
+        "data_vacancies": [
+            {
+                "name_vacancies": "Продавец-кассир",
+                "salary": {
+                    "from": 60000,
+                    "to": 80000,
+                    "currency": "KZT",
+                    "gross": false
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120515736"
+            },
+            {
+                "name_vacancies": "Администратор торгового зала (ТРЦ SAYA PARK)",
+                "salary": {
+                    "from": 224100,
+                    "to": null,
+                    "currency": "KZT",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120471990"
+            },
+            {
+                "name_vacancies": "Продавец-кассир в ТРЦ",
+                "salary": {
+                    "from": 60000,
+                    "to": 100000,
+                    "currency": "KZT",
+                    "gross": false
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120481843"
+            },
+            {
+                "name_vacancies": "Кладовщик (ТРЦ SAYA PARK)",
+                "salary": {
+                    "from": 159600,
+                    "to": null,
+                    "currency": "KZT",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120472947"
+            },
+            {
+                "name_vacancies": "Продавец-кассир в (ТРЦ SAYA PARK)",
+                "salary": {
+                    "from": 145100,
+                    "to": null,
+                    "currency": "KZT",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120473177"
+            },
+            {
+                "name_vacancies": "Кладовщик",
+                "salary": {
+                    "from": 100000,
+                    "to": 130000,
+                    "currency": "KZT",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120464677"
+            },
+            {
+                "name_vacancies": "Продавец-кассир в ТРЦ \"Мега парк\"",
+                "salary": {
+                    "from": 90000,
+                    "to": 110000,
+                    "currency": "KZT",
+                    "gross": false
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120208361"
+            },
+            {
+                "name_vacancies": "Продавец-кассир (ТРЦ \"Хан Шатыр\")",
+                "salary": {
+                    "from": 60000,
+                    "to": 80000,
+                    "currency": "KZT",
+                    "gross": false
+                },
+                "url_vacancies": "https://hh.ru/vacancy/119902365"
+            },
+            {
+                "name_vacancies": "Продавец-кассир (ТРЦ \" Батыр Молл\")",
+                "salary": {
+                    "from": 60000,
+                    "to": 75000,
+                    "currency": "KZT",
+                    "gross": false
+                },
+                "url_vacancies": "https://hh.ru/vacancy/119864489"
+            },
+            {
+                "name_vacancies": "Продавец-кассир в ТРЦ \"АДК\"",
+                "salary": {
+                    "from": 90000,
+                    "to": 110000,
+                    "currency": "KZT",
+                    "gross": false
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120505751"
+            },
+            {
+                "name_vacancies": "Продавец-кассир в ТРЦ \"Таир \"",
+                "salary": {
+                    "from": 60000,
+                    "to": 80000,
+                    "currency": "KZT",
+                    "gross": false
+                },
+                "url_vacancies": "https://hh.ru/vacancy/117777800"
+            },
+            {
+                "name_vacancies": "Продавец-кассир (ТРЦ \"Март\")",
+                "salary": {
+                    "from": null,
+                    "to": 130000,
+                    "currency": "KZT",
+                    "gross": false
+                },
+                "url_vacancies": "https://hh.ru/vacancy/119776089"
+            },
+            {
+                "name_vacancies": "Кладовщик (ТРЦ \"Батыр Молл\")",
+                "salary": {
+                    "from": null,
+                    "to": 130000,
+                    "currency": "KZT",
+                    "gross": false
+                },
+                "url_vacancies": "https://hh.ru/vacancy/119860215"
+            },
+            {
+                "name_vacancies": "Продавец-кассир (ТРЦ \"MEGA Silk Way\")",
+                "salary": {
+                    "from": 60000,
+                    "to": 80000,
+                    "currency": "KZT",
+                    "gross": false
+                },
+                "url_vacancies": "https://hh.ru/vacancy/120117545"
+            },
+            {
+                "name_vacancies": "Кладовщик (ТРЦ \"MEGA Silk Way\")",
+                "salary": {
+                    "from": null,
+                    "to": 150000,
+                    "currency": "KZT",
+                    "gross": false
+                },
+                "url_vacancies": "https://hh.ru/vacancy/119775964"
+            },
+            {
+                "name_vacancies": "Кладовщик (ТРЦ \"Хан-Шатыр\")",
+                "salary": {
+                    "from": null,
+                    "to": 150000,
+                    "currency": "KZT",
+                    "gross": false
+                },
+                "url_vacancies": "https://hh.ru/vacancy/119902318"
+            },
+            {
+                "name_vacancies": "Администратор торгового зала (ТРЦ \"ADK River\")",
+                "salary": {
+                    "from": null,
+                    "to": 180000,
+                    "currency": "KZT",
+                    "gross": false
+                },
+                "url_vacancies": "https://hh.ru/vacancy/119775736"
+            }
+        ]
+    },
+    {
+        "employers_name": "Остин Кыргызстан (O’STIN ТМ)",
+        "data_vacancies": [
+            {
+                "name_vacancies": "Продавец-кассир (ТРЦ \"Азия Молл\")",
+                "salary": {
+                    "from": 15000,
+                    "to": 20000,
+                    "currency": "KGS",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/119859017"
+            },
+            {
+                "name_vacancies": "Кладовщик (ТРЦ \"Бишкек Парк\")",
+                "salary": {
+                    "from": 30000,
+                    "to": null,
+                    "currency": "KGS",
+                    "gross": true
+                },
+                "url_vacancies": "https://hh.ru/vacancy/119859146"
+            }
+        ]
+    },
+    {
+        "employers_name": "Остин-Транс",
+        "data_vacancies": []
+    },
+    {
+        "employers_name": "Остин Узбекистан",
+        "data_vacancies": []
+    }
+]

@@ -1,0 +1,244 @@
+{
+    "items": [
+        {
+            "id": "9364258",
+            "name": "Sber-School",
+            "url": "https://api.hh.ru/employers/9364258",
+            "alternate_url": "https://hh.ru/employer/9364258",
+            "logo_urls": null,
+            "vacancies_url": "https://api.hh.ru/vacancies?employer_id=9364258",
+            "open_vacancies": 0
+        },
+        {
+            "id": "1388900",
+            "name": "Корпоративный университет Сбербанка",
+            "url": "https://api.hh.ru/employers/1388900",
+            "alternate_url": "https://hh.ru/employer/1388900",
+            "logo_urls": {
+                "original": "https://img.hhcdn.ru/employer-logo-original/785818.png",
+                "240": "https://img.hhcdn.ru/employer-logo/3584164.png",
+                "90": "https://img.hhcdn.ru/employer-logo/3584163.png"
+            },
+            "vacancies_url": "https://api.hh.ru/vacancies?employer_id=1388900",
+            "open_vacancies": 11
+        },
+        {
+            "id": "1770333",
+            "name": "Кредит Сбер",
+            "url": "https://api.hh.ru/employers/1770333",
+            "alternate_url": "https://hh.ru/employer/1770333",
+            "logo_urls": null,
+            "vacancies_url": "https://api.hh.ru/vacancies?employer_id=1770333",
+            "open_vacancies": 0
+        },
+        {
+            "id": "195398",
+            "name": "Негосударственный Пенсионный Фонд Сбербанка",
+            "url": "https://api.hh.ru/employers/195398",
+            "alternate_url": "https://hh.ru/employer/195398",
+            "logo_urls": {
+                "original": "https://img.hhcdn.ru/employer-logo-original/1244563.png",
+                "240": "https://img.hhcdn.ru/employer-logo/6598682.png",
+                "90": "https://img.hhcdn.ru/employer-logo/6598681.png"
+            },
+            "vacancies_url": "https://api.hh.ru/vacancies?employer_id=195398",
+            "open_vacancies": 17
+        },
+        {
+            "id": "88687",
+            "name": "Отделение Банк Татарстан №8610 ОАО Сбербанка России",
+            "url": "https://api.hh.ru/employers/88687",
+            "alternate_url": "https://hh.ru/employer/88687",
+            "logo_urls": {
+                "original": "https://img.hhcdn.ru/employer-logo-original/212163.png",
+                "240": "https://img.hhcdn.ru/employer-logo/575469.png",
+                "90": "https://img.hhcdn.ru/employer-logo/575468.png"
+            },
+            "vacancies_url": "https://api.hh.ru/vacancies?employer_id=88687",
+            "open_vacancies": 0
+        },
+        {
+            "id": "3529",
+            "name": "СБЕР",
+            "url": "https://api.hh.ru/employers/3529",
+            "alternate_url": "https://hh.ru/employer/3529",
+            "logo_urls": {
+                "original": "https://img.hhcdn.ru/employer-logo-original/1311252.jpg",
+                "240": "https://img.hhcdn.ru/employer-logo/6865267.jpeg",
+                "90": "https://img.hhcdn.ru/employer-logo/6865266.jpeg"
+            },
+            "vacancies_url": "https://api.hh.ru/vacancies?employer_id=3529",
+            "open_vacancies": 4673
+        },
+        {
+            "id": "4383715",
+            "name": "Сбер",
+            "url": "https://api.hh.ru/employers/4383715",
+            "alternate_url": "https://hh.ru/employer/4383715",
+            "logo_urls": null,
+            "vacancies_url": "https://api.hh.ru/vacancies?employer_id=4383715",
+            "open_vacancies": 0
+        },
+        {
+            "id": "5986730",
+            "name": "Сбер Автомотив Технологии",
+            "url": "https://api.hh.ru/employers/5986730",
+            "alternate_url": "https://hh.ru/employer/5986730",
+            "logo_urls": {
+                "original": "https://img.hhcdn.ru/employer-logo-original/932023.png",
+                "240": "https://img.hhcdn.ru/employer-logo/4168645.png",
+                "90": "https://img.hhcdn.ru/employer-logo/4168644.png"
+            },
+            "vacancies_url": "https://api.hh.ru/vacancies?employer_id=5986730",
+            "open_vacancies": 0
+        },
+        {
+            "id": "829010",
+            "name": "Сбер Банк",
+            "url": "https://api.hh.ru/employers/829010",
+            "alternate_url": "https://hh.ru/employer/829010",
+            "logo_urls": {
+                "original": "https://img.hhcdn.ru/employer-logo-original/919444.png",
+                "240": "https://img.hhcdn.ru/employer-logo/4118353.png",
+                "90": "https://img.hhcdn.ru/employer-logo/4118352.png"
+            },
+            "vacancies_url": "https://api.hh.ru/vacancies?employer_id=829010",
+            "open_vacancies": 45
+        },
+        {
+            "id": "565840",
+            "name": "Сбербанк АСТ",
+            "url": "https://api.hh.ru/employers/565840",
+            "alternate_url": "https://hh.ru/employer/565840",
+            "logo_urls": {
+                "original": "https://img.hhcdn.ru/employer-logo-original/780228.jpg",
+                "240": "https://img.hhcdn.ru/employer-logo/3561804.jpeg",
+                "90": "https://img.hhcdn.ru/employer-logo/3561803.jpeg"
+            },
+            "vacancies_url": "https://api.hh.ru/vacancies?employer_id=565840",
+            "open_vacancies": 6
+        },
+        {
+            "id": "5049456",
+            "name": "Сбербанк Инвестиции",
+            "url": "https://api.hh.ru/employers/5049456",
+            "alternate_url": "https://hh.ru/employer/5049456",
+            "logo_urls": null,
+            "vacancies_url": "https://api.hh.ru/vacancies?employer_id=5049456",
+            "open_vacancies": 0
+        },
+        {
+            "id": "694938",
+            "name": "Сбербанк-Капитал",
+            "url": "https://api.hh.ru/employers/694938",
+            "alternate_url": "https://hh.ru/employer/694938",
+            "logo_urls": {
+                "original": "https://img.hhcdn.ru/employer-logo-original/1038914.png",
+                "240": "https://img.hhcdn.ru/employer-logo/5776413.png",
+                "90": "https://img.hhcdn.ru/employer-logo/5776412.png"
+            },
+            "vacancies_url": "https://api.hh.ru/vacancies?employer_id=694938",
+            "open_vacancies": 4
+        },
+        {
+            "id": "1060022",
+            "name": "Сбербанк Лизинг Казахстан",
+            "url": "https://api.hh.ru/employers/1060022",
+            "alternate_url": "https://hh.ru/employer/1060022",
+            "logo_urls": null,
+            "vacancies_url": "https://api.hh.ru/vacancies?employer_id=1060022",
+            "open_vacancies": 0
+        },
+        {
+            "id": "1473866",
+            "name": "Сбербанк-Сервис",
+            "url": "https://api.hh.ru/employers/1473866",
+            "alternate_url": "https://hh.ru/employer/1473866",
+            "logo_urls": {
+                "original": "https://img.hhcdn.ru/employer-logo-original/766272.jpg",
+                "240": "https://img.hhcdn.ru/employer-logo/3506046.jpeg",
+                "90": "https://img.hhcdn.ru/employer-logo/3506045.jpeg"
+            },
+            "vacancies_url": "https://api.hh.ru/vacancies?employer_id=1473866",
+            "open_vacancies": 23
+        },
+        {
+            "id": "1701583",
+            "name": "Сбербанк Факторинг",
+            "url": "https://api.hh.ru/employers/1701583",
+            "alternate_url": "https://hh.ru/employer/1701583",
+            "logo_urls": {
+                "original": "https://img.hhcdn.ru/employer-logo-original/1073371.png",
+                "240": "https://img.hhcdn.ru/employer-logo/5914114.png",
+                "90": "https://img.hhcdn.ru/employer-logo/5914113.png"
+            },
+            "vacancies_url": "https://api.hh.ru/vacancies?employer_id=1701583",
+            "open_vacancies": 3
+        },
+        {
+            "id": "9301808",
+            "name": "Сбер Бизнес Софт",
+            "url": "https://api.hh.ru/employers/9301808",
+            "alternate_url": "https://hh.ru/employer/9301808",
+            "logo_urls": {
+                "original": "https://img.hhcdn.ru/employer-logo-original/1413293.png",
+                "240": "https://img.hhcdn.ru/employer-logo/7272833.png",
+                "90": "https://img.hhcdn.ru/employer-logo/7272832.png"
+            },
+            "vacancies_url": "https://api.hh.ru/vacancies?employer_id=9301808",
+            "open_vacancies": 31
+        },
+        {
+            "id": "5621481",
+            "name": "Сбер Восток",
+            "url": "https://api.hh.ru/employers/5621481",
+            "alternate_url": "https://hh.ru/employer/5621481",
+            "logo_urls": null,
+            "vacancies_url": "https://api.hh.ru/vacancies?employer_id=5621481",
+            "open_vacancies": 0
+        },
+        {
+            "id": "2401651",
+            "name": "Сбер-займ",
+            "url": "https://api.hh.ru/employers/2401651",
+            "alternate_url": "https://hh.ru/employer/2401651",
+            "logo_urls": {
+                "original": "https://img.hhcdn.ru/employer-logo-original/696582.jpg",
+                "240": "https://img.hhcdn.ru/employer-logo/3227445.jpeg",
+                "90": "https://img.hhcdn.ru/employer-logo/3227444.jpeg"
+            },
+            "vacancies_url": "https://api.hh.ru/vacancies?employer_id=2401651",
+            "open_vacancies": 0
+        },
+        {
+            "id": "9057912",
+            "name": "Сбер-Лифт",
+            "url": "https://api.hh.ru/employers/9057912",
+            "alternate_url": "https://hh.ru/employer/9057912",
+            "logo_urls": {
+                "original": "https://img.hhcdn.ru/employer-logo-original/990234.jpg",
+                "240": "https://img.hhcdn.ru/employer-logo/5581741.jpeg",
+                "90": "https://img.hhcdn.ru/employer-logo/5581740.jpeg"
+            },
+            "vacancies_url": "https://api.hh.ru/vacancies?employer_id=9057912",
+            "open_vacancies": 0
+        },
+        {
+            "id": "2104700",
+            "name": "СБЕР (ООО еАптека)",
+            "url": "https://api.hh.ru/employers/2104700",
+            "alternate_url": "https://hh.ru/employer/2104700",
+            "logo_urls": {
+                "original": "https://img.hhcdn.ru/employer-logo-original/862351.png",
+                "240": "https://img.hhcdn.ru/employer-logo/3890280.png",
+                "90": "https://img.hhcdn.ru/employer-logo/3890279.png"
+            },
+            "vacancies_url": "https://api.hh.ru/vacancies?employer_id=2104700",
+            "open_vacancies": 94
+        }
+    ],
+    "found": 30,
+    "pages": 2,
+    "page": 0,
+    "per_page": 20
+}
